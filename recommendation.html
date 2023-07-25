@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Products</title>
+</head>
+<body>
+    <h2>Recommended Products for '{{ query }}':</h2>
+    <ul>
+        {% for index, row in recommended_products.iterrows() %}
+        <li>
+            Product ID: {{ row['asin'] }}, Product Name: {{ row['summary'] }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
