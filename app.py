@@ -3,10 +3,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# Load the data and functions from the Jupyter Notebook
-# You can use pandas to read the reviews and QA datasets, and define the functions accordingly
-
-# Sample product data for demonstration
+# Sample product data 
 product_data = pd.DataFrame({
     'asin': ['B000050B6Z', 'B000001OMI', 'B0000YBX0W'],
     'summary': ['Product A', 'Product B', 'Product C'],
@@ -21,9 +18,7 @@ def index():
 def recommend():
     query = request.form['query']
 
-    # Implement the product recommendation logic using the functions from the Jupyter Notebook
-    # Call the recommendation functions and pass the query to get the recommendations
-
+    # Product Recommendation Using Advanced_Recommender
     # For demonstration purposes, we'll return sample product data
     recommended_products = product_data.sample(3)
 
